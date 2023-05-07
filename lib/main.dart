@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
 
 void main() {
   runApp(myApp());
@@ -10,12 +12,15 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-          child: Center(
-        child: Container(
-          child: Text("Welcome to the 30 day app"),
-        ),
-      )),
+      //home: homePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+      },
     );
   }
 }
