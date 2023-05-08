@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(myApp());
+  runApp( const MyApp());
 }
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,10 @@ class myApp extends StatelessWidget {
       //home: homePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.purple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        //primaryTextTheme: GoogleFonts.latoTextTheme(),
+
       ),
       routes: {
         "/": (context) => LoginPage(),
